@@ -1,0 +1,485 @@
+
+/**
+
+  Webuddha wbTeamPro
+  (c)2010 Webuddha.com, The Holodyn Corporation - All Rights Reserved
+
+  All values in this stylesheet are based on a 24px height row
+
+**/
+
+/********************************************************************************/
+.jQueryGantt {
+  background:#FFF;
+  font-family:tahoma, arial, verdana;
+  font-size:10px;
+  margin-bottom:24px;
+}
+.jQueryGantt table {
+  padding:0;
+  margin:0;
+}
+.jQueryGantt table td {
+  vertical-align:top;
+}
+
+/********************************************************************************/
+.jQueryGanttDisplayCell {
+}
+
+/********************************************************************************/
+.jQueryGantt .tooltip {
+  z-index:10;
+  position:absolute;
+  top:1px;
+  left:1px;
+  width:220px;
+  display:none;
+  padding-top:9px;
+}
+.jQueryGantt .tooltip .ptr {
+  position:absolute;
+  top:0px;
+  left:10px;
+  width:10px;
+  height:10px;
+  background:url(img/tooltip-diag-tl.png) 0 0 no-repeat;
+  z-index:11;
+}
+.jQueryGantt .tooltip .ptr.rt {
+  left:200px;
+  background:url(img/tooltip-diag-tr.png) 0 0 no-repeat;
+}
+.jQueryGantt .tooltip .txt {
+  border-radius:5px;
+  background:#FFFFCC;
+  border:1px solid #996633;
+}
+.jQueryGantt .tooltip .txt .pad {
+  padding:10px;
+}
+
+/********************************************************************************/
+#jQueryGanttTaskEditor {
+  z-index:11;
+  top:0;left:0;
+  overflow:hidden;
+  position:absolute;
+  background:url(img/white-75.png);
+}
+#jQueryGanttTaskEditor > .ajax-loading {
+  border:none;
+  background-color:transparent;
+}
+#jQueryGanttTaskEditor > .ajax-loading.overlay {
+  position:absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background-color:#FFF;
+  opacity:0.75;
+}
+#jQueryGanttTaskEditor .actionEditTbl_wrap {
+  background:#fff;
+  padding:5px 5px 10px 5px;
+}
+#jQueryGanttTaskEditor .actionEditTbl_wrap .actionEditTbl {
+}
+#jQueryGanttTaskEditor .actionEditTbl_wrap .actionEditTbl tr td {
+  vertical-align: top;
+}
+
+/********************************************************************************/
+#jQueryGanttTable {
+}
+#jQueryGanttTable .mainRow .leftCol {
+  width:15%;
+}
+#jQueryGanttTable > tr > td,
+#jQueryGanttTable > tbody > tr > td {
+  padding:0;
+  margin:0;
+}
+
+/********************************************************************************/
+#jQueryGanttLeft {
+  padding: 0px;
+  overflow: hidden;
+  background:url(img/tablebg.gif) 0px 0px repeat;
+}
+#jQueryGanttLeft table {
+  border-right:1px solid #CCC;
+}
+#jQueryGanttLeft table tr th,
+#jQueryGanttLeft table tr td {
+  padding:0;margin:0;
+  font-size:10px;
+  height:24px;
+  line-height:24px;
+}
+#jQueryGanttLeft table tr td div.cfgForceBoundaries {
+  padding:3px 0 0 3px
+}
+#jQueryGanttLeft table tr td div.cfgForceBoundaries input {
+  float:left;
+  margin:0px;
+}
+#jQueryGanttLeft table tr td div.cfgForceBoundaries b {
+  float:left;
+  display:block;
+  padding:0 0 0 5px;
+}
+#jQueryGanttLeft table tr th.name,
+#jQueryGanttLeft table tr th.duration,
+#jQueryGanttLeft table tr th.resource,
+#jQueryGanttLeft table tr th.completed,
+#jQueryGanttLeft table tr th.date_start,
+#jQueryGanttLeft table tr th.date_finish {
+  padding:0 5px;
+  text-align:left;
+}
+#jQueryGanttLeft table tr.action.edit td {
+  background-color:#DDD;
+}
+#jQueryGanttLeft table tr.action td.name {
+  padding:0;
+  text-align:left;
+  white-space:nowrap;
+}
+#jQueryGanttLeft table tr.action td.name div {
+  width:240px;
+  overflow:hidden;
+  line-height:24px;
+}
+#jQueryGanttLeft table tr.action td.name div a {
+  display:block;
+}
+#jQueryGanttLeft table tr.action.level1 td.name div a { padding-left:5px; }
+#jQueryGanttLeft table tr.action.level2 td.name div a { padding-left:15px; }
+#jQueryGanttLeft table tr.action.level3 td.name div a { padding-left:25px; }
+#jQueryGanttLeft table tr.action.level4 td.name div a { padding-left:35px; }
+#jQueryGanttLeft table tr.action.level5 td.name div a { padding-left:45px; }
+#jQueryGanttLeft table tr.action.level6 td.name div a { padding-left:55px; }
+#jQueryGanttLeft table tr.action.level7 td.name div a { padding-left:65px; }
+#jQueryGanttLeft table tr.action.level8 td.name div a { padding-left:75px; }
+#jQueryGanttLeft table tr.action.level9 td.name div a { padding-left:85px; }
+#jQueryGanttLeft table tr.action.level10 td.name div a { padding-left:95px; }
+#jQueryGanttLeft table tr.action td.name div a span {
+  display:block;
+  padding:0 0 0 15px;
+  background:url(img/task.png) center left no-repeat;
+}
+#jQueryGanttLeft table tr.action.group td.name div a span {
+  background:url(img/group.png) center left no-repeat;
+}
+#jQueryGanttLeft table tr.action.project td.name div a span {
+  background:url(img/project.png) center left no-repeat;
+}
+/*
+#jQueryGanttLeft table tr.action td.name div a.expand span {
+  background:url(img/minus.gif) center left no-repeat;
+}
+*/
+#jQueryGanttLeft table tr.action td.duration,
+#jQueryGanttLeft table tr.action td.resource,
+#jQueryGanttLeft table tr.action td.completed,
+#jQueryGanttLeft table tr.action td.date_start,
+#jQueryGanttLeft table tr.action td.date_finish {
+  border-right:1px solid #CCC;
+  padding:0 5px;
+  text-align:center;
+}
+
+/********************************************************************************/
+#jQueryGanttRight {
+  padding: 0px;
+  overflow: hidden;
+  background:url(img/tablebg.gif) 0px 0px repeat;
+}
+#jQueryGanttRight table {
+  border-left:1px solid #CCC;
+  border-right:1px solid #CCC;
+}
+#jQueryGanttRight table tr th,
+#jQueryGanttRight table tr td {
+  font-size:10px;
+  height:24px;
+}
+#jQueryGanttRight table tr th.ctrl {
+  padding:0 5px;
+  text-align:right;
+}
+#jQueryGanttRight table tr td.ctrl {
+  padding:0;
+  text-align:center;
+  white-space:nowrap;
+}
+#jQueryGanttRight table tr td.ctrl div {
+  width:20px;
+  overflow:hidden;
+  line-height:24px;
+}
+#jQueryGanttRight table tr td.ctrl div a {
+  display:block;
+}
+
+/********************************************************************************/
+#jQueryGanttTable .centerColWrap {
+  position: relative;
+}
+
+/********************************************************************************/
+#jQueryGanttTableCenter {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-shadow: 0 0 4px 6px rgba(255,255,255,0.5);
+}
+
+/********************************************************************************/
+#jQueryGanttCenterScroller {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  height: 24px;
+  width: 100%;
+  overflow:auto;
+  overflow-x:scroll;
+  overflow-y:hidden;
+  background: rgba(255,255,255,0.75);
+}
+#jQueryGanttCenterScroller .mirror {
+  height: 1px;
+  visibility: hidden;
+}
+/*
+#jQueryGanttCenterScroller .bg {
+  width: 100%;
+  height: 24px;
+  background: rgba(255,255,255,0.75);
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+#jQueryGanttCenterScroller .fg {
+  cursor: pointer;
+  width: 120px;
+  height: 24px;
+  background: rgba(0,0,0,0.25);
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+*/
+
+/********************************************************************************/
+#jQueryGanttCenter {
+  position:relative;
+  overflow:auto;
+  overflow-x:hidden;
+  overflow-y:hidden;
+  padding:48px 0 0 0;
+}
+#jQueryGanttCenter table tr td {
+  padding:0;margin:0;
+  font-size:11px;
+  height:24px;
+  line-height:24px;
+}
+#jQueryGanttCenter .jQueryGanttDateMajor {
+  background:url(img/majordatebg.gif) 0px 24px repeat;
+}
+.jQueryGanttDisplayCell.month #jQueryGanttCenter .jQueryGanttDateMajor {
+  background:url(img/majordatebg-month.png) 0px 24px repeat;
+}
+#jQueryGanttCenter .jQueryGanttDateMajor td {
+  white-space:nowrap;
+  text-align:center;
+}
+#jQueryGanttCenter .jQueryGanttDateMinor {
+  background:url(img/calendarbg.gif) 0px 24px repeat;
+}
+.jQueryGanttDisplayCell.month #jQueryGanttCenter .jQueryGanttDateMinor {
+  background:url(img/calendarbg-month.png) 0px 24px repeat;
+}
+#jQueryGanttCenter .jQueryGanttDateMinor td {
+  white-space:nowrap;
+  text-align:center;
+}
+/*
+#jQueryGanttCenter .jQueryGanttDateMinor td.we {
+  background:#E0E0E0;
+}
+#jQueryGanttCenter .jQueryGanttTask td {
+  background:#F6F6F6;
+}
+#jQueryGanttCenter .jQueryGanttTask td.we {
+  background:#F0F0F0;
+}
+*/
+#jQueryGanttCenter .jQueryGanttDateMinor td.today,
+#jQueryGanttCenter .jQueryGanttTask td.today {
+  background:url(img/grid-today.png) 0px 0px repeat;
+}
+#jQueryGanttCenter #jQueryGanttTaskList .todaycol {
+  z-index:0;
+  position:absolute;
+  top:0px;
+  width:24px;
+  height:100px;
+  background:url(img/grid-today.png) 0px 0px repeat;
+}
+
+/********************************************************************************/
+#jQueryGanttTaskList {
+  z-index:0;
+  position:relative;
+  background:url(img/calendarbg.gif) 0px 0px repeat;
+}
+.jQueryGanttDisplayCell.month #jQueryGanttTaskList {
+  background:url(img/calendarbg-month.png) 0px 0px repeat;
+}
+#jQueryGanttTaskList .trow {
+  z-index:1;
+  position:relative;
+  height:24px;
+}
+#jQueryGanttTaskList .trow .txtr {
+  position:absolute;
+  top:3px;
+  font-size:10px;
+}
+#jQueryGanttTaskList .trow .gwrap {
+  position:absolute;
+  top:3px;
+  height:10px;
+}
+#jQueryGanttTaskList .trow .gwrap .task {
+  height: 10px;
+  opacity:0.9;
+  background: #000; /* for non-css3 browsers */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#666666', endColorstr='#000000'); /* for IE */
+  background: -webkit-gradient(linear, left top, left bottom, from(#666666), to(#000000)); /* for webkit browsers */
+  background: -moz-linear-gradient(top,  #666666,  #000000); /* for firefox 3.6+ */
+}
+#jQueryGanttTaskList .trow .gwrap .task .comp {
+  float:left;
+  background-color:#707070;
+  height:8px;
+  margin-top:1px;
+  overflow: hidden;
+  filter: alpha(opacity=80);
+  opacity:0.8;
+}
+#jQueryGanttTaskList .trow .gwrap .re {
+  float:right;
+  width:5px;
+  height:4px;
+  background:url(img/groupends.gif) -5px -7px no-repeat;
+}
+#jQueryGanttTaskList .trow .gwrap .le {
+  float:left;
+  width:5px;
+  height:4px;
+  background:url(img/groupends.gif) 0px -7px no-repeat;
+}
+#jQueryGanttTaskList .trow .twrap {
+  position:absolute;
+  top:4px;
+}
+#jQueryGanttTaskList .trow .twrap .task {
+  border: 1px solid #666;
+  border-radius: 3px;
+  opacity:0.9;
+  height: 13px;
+  background: #ACF; /* for non-css3 browsers */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b2e0e8', endColorstr='#32b1c2'); /* for IE */
+  background: -webkit-gradient(linear, left top, left bottom, from(#b2e0e8), to(#32b1c2)); /* for webkit browsers */
+  background: -moz-linear-gradient(top,  #b2e0e8,  #32b1c2); /* for firefox 3.6+ */
+}
+#jQueryGanttTaskList .trow .twrap .task .comp {
+  position:relative;
+  float:left;
+  background-color:black;
+  height:13px;
+  overflow: auto;
+  margin-top:0px;
+  filter: alpha(opacity=40);
+  opacity:0.4;
+}
+#jQueryGanttTaskList .trow .gwrap .task .dl,
+#jQueryGanttTaskList .trow .twrap .task .dl {
+  z-index:1;
+  cursor: e-resize;
+  width:5px;
+  width:9px;
+  background:transparent;
+  height:15px;
+  position:absolute;
+  left:0px;
+  top:0px;
+}
+#jQueryGanttTaskList .trow .gwrap .task .dl:hover,
+#jQueryGanttTaskList .trow .gwrap .task .dl.active,
+#jQueryGanttTaskList .trow .twrap .task .dl:hover,
+#jQueryGanttTaskList .trow .twrap .task .dl.active {
+  background:#F0;
+}
+#jQueryGanttTaskList .trow .gwrap .task .dr,
+#jQueryGanttTaskList .trow .twrap .task .dr {
+  z-index:1;
+  cursor: e-resize;
+  width:5px;
+  width:9px;
+  background:transparent;
+  height:15px;
+  position:absolute;
+  right:0px;
+  top:0px;
+}
+#jQueryGanttTaskList .trow .gwrap .task .dr:hover,
+#jQueryGanttTaskList .trow .twrap .task .dr:hover {
+}
+#jQueryGanttTaskList .trow .pwrap {
+  position:absolute;
+  top:4px;
+}
+#jQueryGanttTaskList .trow .pwrap .project {
+  border: 1px solid #666;
+  border-radius: 3px;
+  opacity:0.9;
+  height: 13px;
+  background: #ff7171; /* for non-css3 browsers */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff7171', endColorstr='#af0a0a'); /* for IE */
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff7171), to(#af0a0a)); /* for webkit browsers */
+  background: -moz-linear-gradient(top,  #ff7171,  #af0a0a); /* for firefox 3.6+ */
+}
+#jQueryGanttTaskList .trow .pwrap .project .comp {
+  position:relative;
+  float:left;
+  background-color:black;
+  height:13px;
+  overflow: auto;
+  margin-top:0px;
+  filter: alpha(opacity=40);
+  opacity:0.4;
+}
+#jQueryGanttTaskList .trow .pwrap .ct,
+#jQueryGanttTaskList .trow .gwrap .ct,
+#jQueryGanttTaskList .trow .twrap .ct {
+  position:absolute;
+  top:0px;
+  color:#FFF;
+  font-family:tahoma, arial, sans-serif;
+  font-size:8px;
+  line-height:9px;
+  width:20px;
+  text-align:center;
+}
+#jQueryGanttTaskList .trow .pwrap .ct,
+#jQueryGanttTaskList .trow .twrap .ct {
+  font-size:9px;
+  line-height:14px;
+  padding:0 0 0 1px;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="wbGantt.css" />
+  <script type="text/javascript" src="wbGantt.js"></script>
+</head>
+<body>
+  <div id="GanttChart"></div>
+  <script>
+    var _addon_wbteampro = {
+      projectActionList: {}
+    };
+    var jQueryGanttInst = new jQueryGantt( jQuery('#GanttChart'), {
+      'vViewOnly': false,
+      'vDateInputFormat': 'mm/dd/yyyy',
+      'vDateDisplayFormat': 'mm/dd/yyyy',
+      'vForceBoundaries': 1
+      });
+    if( jQueryGanttInst ) {
+      jQueryGanttInst.addTaskItem({
+        'id': '1'
+        , 'projectId': '710'
+        , 'parentId': '0'
+        , 'type': 'group'
+        , 'name': 'MailChimp'
+        , 'duration': '3600'
+        , 'start_raw': '1539057600'
+        , 'finish_raw': '1539057600'
+        , 'resource': 'dwarren'
+        , 'completed': '67'
+        });
+      jQueryGanttInst.addTaskItem({
+        'id': '15383'
+        , 'projectId': '710'
+        , 'parentId': '1'
+        , 'type': 'task'
+        , 'name': 'Create account for Hurley'
+        , 'duration': '86400'
+        , 'start_raw': '1539057600'
+        , 'finish_raw': '1539057600'
+        , 'resource': 'dwarren'
+        , 'completed': '100'
+        });
+      jQueryGanttInst.addTaskItem({
+        'id': '15384'
+        , 'projectId': '710'
+        , 'parentId': '1'
+        , 'type': 'task'
+        , 'name': 'Add Newsletter signup Integration'
+        , 'duration': '86400'
+        , 'start_raw': '1539057600'
+        , 'finish_raw': '1539057600'
+        , 'resource': 'dwarren'
+        , 'completed': '100'
+        });
+      jQueryGanttInst.addTaskItem({
+        'id': '15385'
+        , 'projectId': '710'
+        , 'parentId': '1'
+        , 'type': 'task'
+        , 'name': 'Add Newletter signup Pop-Up box on Home Page'
+        , 'duration': '3600'
+        , 'start_raw': '1539057600'
+        , 'finish_raw': '1539057600'
+        , 'resource': 'dwarren'
+        , 'completed': '0'
+        });
+      jQueryGanttInst.render();
+    }
+  </script>
+</body>
+</html>
